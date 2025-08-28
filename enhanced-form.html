@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Example</title>
+    <meta name="description" content="A complete HTML5 form with tables, media, lists, and accessibility features.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        form {
+            margin-top: 1rem;
+            border: 1px solid #ccc;
+            padding: 1rem;
+        }
+        input, select, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #aaa;
+            padding: 0.5rem;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced Form Demo</h1>
+    <p>Explore form features, structured content, and accessibility in one HTML5 page.</p>
+</header>
+
+<main>
+
+    <section aria-labelledby="form-section">
+        <h2 id="form-section">Registration Form</h2>
+        <form action="#" method="post" autocomplete="on" aria-label="User Registration Form">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required autocomplete="given-name">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="6" required autocomplete="new-password">
+
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Select --</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="nonbinary">Non-binary</option>
+                <option value="prefer-not">Prefer not to say</option>
+            </select>
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..." required></textarea>
+
+            <label>
+                <input type="checkbox" name="terms" required>
+                I agree to the <a href="#">terms and conditions</a>
+            </label>
+
+            <label for="userid">User ID (Read-only):</label>
+            <input type="text" id="userid" value="USR-12345" readonly>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section aria-labelledby="info-section">
+        <h2 id="info-section">Why Register?</h2>
+        <ul>
+            <li>Get access to exclusive content</li>
+            <li>Receive newsletters and updates</li>
+            <li>Join a community of learners</li>
+        </ul>
+    </section>
+
+    <section aria-labelledby="table-section">
+        <h2 id="table-section">Membership Plans</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Benefits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>Free</td>
+                    <td>Access to articles</td>
+                </tr>
+                <tr>
+                    <td>Pro</td>
+                    <td>$9.99/mo</td>
+                    <td>Includes courses & priority support</td>
+                </tr>
+                <tr>
+                    <td>Elite</td>
+                    <td>$19.99/mo</td>
+                    <td>All Pro benefits + live mentoring</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section aria-labelledby="media-section">
+        <h2 id="media-section">Welcome Video</h2>
+        <video controls width="100%">
+            <source src="welcome.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p><em>Watch this short video to learn more about our community.</em></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced Form Project. Built with HTML5 & accessibility in mind.</p>
+</footer>
+
+</body>
+</html>
